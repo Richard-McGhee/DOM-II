@@ -8,7 +8,8 @@ const images = document.querySelectorAll('img');
 const parentContainer = document.querySelector('.container');
 const mainHome = document.querySelector('.home');
 const navBar = document.querySelector('nav');
-
+const footer = document.querySelector('footer');
+const footerP = document.querySelector('footer p')
 
 // Body
 mainBody.addEventListener('wheel', (event) => {
@@ -61,3 +62,20 @@ images.forEach((elem) => {
         elem.style.cssText = 'opacity: 1;';
     });
 });
+
+// Footer Stuff
+
+let newForm = document.createElement('input')
+
+newForm.addEventListener('focus', (event) => {
+    newForm.setAttribute('placeholder', 'input some text here');
+});
+newForm.addEventListener('keypress', (event) => {
+    const keyName = event.key;
+    if (keyName === 'Enter') {
+        alert(`You input this: --->>> ${newForm.value};`);
+    }
+})
+
+
+footerP.prepend(newForm)

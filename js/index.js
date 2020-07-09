@@ -5,7 +5,6 @@ const logoHeading = document.querySelector('.logo-heading');
 const buttons = document.querySelectorAll('.btn');
 const mainBody = document.querySelector('body');
 const images = document.querySelectorAll('img');
-const input = document.querySelector('.form-submit');
 const parentContainer = document.querySelector('.container');
 const mainHome = document.querySelector('.home');
 const navBar = document.querySelector('nav');
@@ -53,4 +52,16 @@ logoHeading.addEventListener('mouseenter', (event) => {
 
 logoHeading.addEventListener('mouseleave', (event) => {
     logoHeading.style.color = '#212529';
+});
+
+// Image Stuff
+
+// Images
+images.forEach((elem) => {
+    elem.addEventListener('dblclick', (event) => {
+        elem.style.cssText = 'opacity: 0.6;';
+    });
+    elem.addEventListener('click', (event) => {
+        elem.style.cssText = 'opacity: 1;';
+    });
 });

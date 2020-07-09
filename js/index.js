@@ -23,3 +23,26 @@ window.addEventListener('contextmenu', (event) => {
 window.addEventListener('load', (event) => {
     alert('Page loaded');
 });
+
+// Nav
+navLink.forEach((elem) => {
+
+    elem.addEventListener('click', (event) => {
+        event.preventDefault();
+    });
+
+    elem.addEventListener('mousedown', (event) => {
+        elem.style.color = 'red';
+    });
+
+    elem.addEventListener('mouseenter', (event) => {
+        elem.style.color = 'blue';
+        TweenMax.to(elem, 1, {scale: 1.5});
+    });
+
+    elem.addEventListener('mouseleave', (event) => {
+        elem.style.color = '#212529';
+        TweenMax.to(elem, 1, {scale: 1});
+    });
+
+});

@@ -13,7 +13,7 @@ const footerP = document.querySelector('footer p')
 
 // Body
 mainBody.addEventListener('wheel', (event) => {
-    logoHeading.innerHTML = "FUN BUS";
+    logoHeading.textContent = "FUN BUS";
 });
 
 window.addEventListener('load', (event) => {

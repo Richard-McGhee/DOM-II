@@ -37,12 +37,20 @@ navLink.forEach((elem) => {
 
     elem.addEventListener('mouseenter', (event) => {
         elem.style.color = 'blue';
-        TweenMax.to(elem, 1, {scale: 1.5});
     });
 
     elem.addEventListener('mouseleave', (event) => {
         elem.style.color = '#212529';
-        TweenMax.to(elem, 1, {scale: 1});
     });
 
+});
+
+// Logo Stuff
+
+logoHeading.addEventListener('mouseenter', (event) => {
+    logoHeading.style.cssText = 'color: blue; cursor: pointer;';
+});
+
+logoHeading.addEventListener('mouseleave', (event) => {
+    logoHeading.style.color = '#212529';
 });

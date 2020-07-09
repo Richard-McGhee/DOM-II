@@ -9,3 +9,17 @@ const input = document.querySelector('.form-submit');
 const parentContainer = document.querySelector('.container');
 const mainHome = document.querySelector('.home');
 const navBar = document.querySelector('nav');
+
+
+// Body
+mainBody.addEventListener('wheel', (event) => {
+    logoHeading.innerHTML = "FUN BUS";
+});
+
+window.addEventListener('contextmenu', (event) => {
+    event.target.classList.toggle('new-body');
+});
+
+window.addEventListener('load', (event) => {
+    alert('Page loaded');
+});

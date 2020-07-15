@@ -40,6 +40,21 @@ navLink.forEach((elem) => {
     });
 
 });
+navBar.addEventListener('dblclick', (event) => {
+    navBar.style.backgroundColor = 'green';
+    event.stopPropagation();
+});
+navBar.addEventListener('click', (event) => {
+    navBar.style.backgroundColor = 'white';
+    event.stopPropagation();
+})
+
+parentContainer.addEventListener('dblclick', (event) => {
+    parentContainer.style.backgroundColor = 'red';
+});
+parentContainer.addEventListener('click', (event) => {
+    parentContainer.style.backgroundColor = 'white';
+});
 
 // Logo Stuff
 

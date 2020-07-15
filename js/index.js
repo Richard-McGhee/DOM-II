@@ -85,6 +85,9 @@ let newForm = document.createElement('input')
 newForm.addEventListener('focus', (event) => {
     newForm.setAttribute('placeholder', 'input some text here');
 });
+newForm.addEventListener('blur', (event) => {
+    newForm.setAttribute('placeholder', 'come back when ready');
+})
 newForm.addEventListener('keypress', (event) => {
     const keyName = event.key;
     if (keyName === 'Enter') {
